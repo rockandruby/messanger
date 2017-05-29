@@ -1,0 +1,36 @@
+.content{
+    margin-top: 10px;
+}
+
+.alert{
+    font-size: 18px;
+    color: red;
+}
+
+.notice{
+    color: green;
+    font-size: 18px;
+}
+
+.validation_errors{
+    display: none;
+    color: red;
+}
+
+.glyphicon-remove{
+    color: red !important;
+}
+
+.users_list div{
+    margin-top: 10px;
+}
+
+.message_window{
+    height: 400px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+.message_window div{
+    padding-top: 10px;
+}
