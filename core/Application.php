@@ -7,9 +7,7 @@ class Application
     {
         $url_parts = array_values(array_filter(explode('/', $_SERVER['REQUEST_URI'])));
 
-        if (empty($url_parts)) {
-            $url_parts = explode('#', 'Home#index');
-        }
+        if (empty($url_parts)) $url_parts = explode('#', 'Home#index');
 
         session_start();
 
