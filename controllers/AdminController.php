@@ -1,6 +1,6 @@
 <?php
 
-use Core\Helper as Helper;
+use Core\Helper;
 
 class AdminController extends BackController
 {
