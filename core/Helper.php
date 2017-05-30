@@ -4,13 +4,19 @@ namespace Core;
 class Helper
 {
     public static function alert($text = ''){
-        setcookie('error', $text, time() + 5, '/');
-        if(isset($_COOKIE['error'])) echo "<div class='alert'>{$_COOKIE['error']}</div>";
+        if(!empty($text)){
+            setcookie('error', $text, time() + 5, '/');
+        }else{
+            if(isset($_COOKIE['error'])) echo "<div class='alert'>{$_COOKIE['error']}</div>";
+        } 
     }
 
     public static function notice($text = ''){
-        setcookie('success', $text, time() + 5, '/');
-        if(isset($_COOKIE['success'])) echo "<div class='notice'>{$_COOKIE['success']}</div>";
+        if(!empty($text)){
+            setcookie('success', $text, time() + 5, '/');
+        }else{
+            if(isset($_COOKIE['success'])) echo "<div class='notice'>{$_COOKIE['success']}</div>";
+        } 
     }
 
     public static function viewPath(){
