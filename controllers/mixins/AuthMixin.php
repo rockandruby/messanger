@@ -29,10 +29,9 @@ trait Auth {
     }
 
     public function signOut(){
-        $role = strpos($_SERVER['REQUEST_URI'], 'admin') ? 'admin' : 'user';
-        if(isset($_SESSION[$role])){
+        if(isset($_SESSION[$this->role])){
             Helper::notice('See you!');
-            $_SESSION[$role] = null;
+            $_SESSION[$this->role] = null;
             header('Location: /');
         }
     }
